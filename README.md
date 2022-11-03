@@ -6,6 +6,8 @@
 
 # サンプルコード
 
+## 実行コード
+
 ```python
 from scrapInvoice import scrap_invoice_number
 
@@ -17,6 +19,25 @@ scrap_invoice_number(invoiceNo, resultPath, False)
 
 # 結果は 'result.json' に出力されます
 ```
+
+## 出力結果
+
+- 成功
+```json
+{
+  "number": "T1234567890123",
+  "name": "サンプル",
+  "timestamp_last": "令和4年6月13日"
+}
+```
+
+- 失敗
+```json
+{
+  "error": "検索対象の登録番号は存在しません。内容をお確かめのうえ、入力してください。"
+}
+```
+
 
 # 実行環境
 
