@@ -15,7 +15,7 @@ SEARCH_INVOICE_NUMBER_URL = "https://www.invoice-kohyo.nta.go.jp/regno-search/de
 
 
 # 適格請求書登録番号のスクレイピング
-def scrap_invoice_number(invoiceNumber: int, outPath: str, headlessMode: bool = True):
+def scrape_invoice_number(invoiceNumber: int, outPath: str, headlessMode: bool = True):
 
     chrome = MyChrome(headlessMode).launch()
 
@@ -23,7 +23,7 @@ def scrap_invoice_number(invoiceNumber: int, outPath: str, headlessMode: bool = 
     chrome.get(url)
 
     html = chrome.page_source.encode('utf-8')
-    result_dict = _scrap_searched_page(html)
+    result_dict = _scrape_searched_page(html)
 
     chrome.close()
     chrome.quit()
@@ -31,7 +31,7 @@ def scrap_invoice_number(invoiceNumber: int, outPath: str, headlessMode: bool = 
     if result_dict:
         export_to_json(outPath, result_dict)
 
-def _scrap_searched_page(html: bytes):
+def _scrape_searched_page(html: bytes):
     print("検索結果ページのスクレイピング")
 
     soup = BeautifulSoup(html, 'lxml')  # lxml はパーサ

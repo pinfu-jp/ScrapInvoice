@@ -1,4 +1,4 @@
-# ScrapInvoice:適格請求書登録状況スクレイピング
+# ScrapeInvoice:適格請求書登録状況スクレイピング
 
 - Webスクレイピングの学習用コードです
 - 適格請求書登録番号が実在するかを調査できるスクリプトです
@@ -9,13 +9,13 @@
 ## 実行コード
 
 ```python
-from scrapInvoice import scrap_invoice_number
+from scrapeInvoice import scrape_invoice_number
 
 invoiceNo = 1234567890123
 resultPath = 'result.json'
 
 # スクレイピング
-scrap_invoice_number(invoiceNo, resultPath, False)
+scrape_invoice_number(invoiceNo, resultPath, False)
 
 # 結果は 'result.json' に出力されます
 ```
@@ -47,5 +47,4 @@ scrap_invoice_number(invoiceNo, resultPath, False)
 - Chrome Driver が必要です
   - https://chromedriver.chromium.org/downloads からダウンロードして以下に配置してください
     - C:\\devtool\\chromedriver_win32\\chromedriver.exe
-    
-- 
+     
