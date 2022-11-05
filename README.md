@@ -15,7 +15,7 @@ invoiceNo = 1234567890123
 resultPath = 'result.json'
 
 # スクレイピング
-scrape_invoice_number(invoiceNo, resultPath, False)
+scrape_invoice_number(invoiceNo, resultPath)
 
 # 結果は 'result.json' に出力されます
 ```
