@@ -29,7 +29,7 @@ def scrape_invoice_number(invoiceNumber: int, outPath: str, headlessMode: bool =
     chrome.quit()
 
     if result_dict:
-        export_to_json(outPath, result_dict)
+        export_dict_to_json(outPath, result_dict)
 
 def _scrape_searched_page(html: bytes):
     print("検索結果ページのスクレイピング")
@@ -55,7 +55,7 @@ def _scrape_searched_page(html: bytes):
     return result_dict
 
 
-def export_to_json(path: str, result_dict: dict):
+def export_dict_to_json(path: str, result_dict: dict):
     print("export_to_json() dict:" +  str(result_dict) + ", path:" + path)
 
     json_file = open(path, mode="w", encoding='utf-8', )
