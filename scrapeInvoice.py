@@ -48,8 +48,6 @@ def _scrape_searched_page(html: bytes):
     detail = soup.find('div', class_='regno-search-detail_container')
 
     result_dict['number'] = detail.find('p', class_='itemdata sp_torokubango_data').text
-    result_dict['name'] = detail.find('p', class_='itemdata sp_nmTsuushou_data').text
-    # userInfo['timestamp_first'] = detail.find('p', class_='itemdata').text
     result_dict['timestamp_last'] = detail.find('p', class_='itemdata latestdate').text
 
     return result_dict

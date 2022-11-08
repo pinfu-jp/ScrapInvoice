@@ -7,9 +7,8 @@ class TestScrapInvoice(unittest.TestCase):
     _resultPath = 'result.json'
 
     def test_ScrapInvoiceNumber_true(self):
-        print('正常な登録番号でテスト')
-        tomakomaiNo = 1000020012131
-        scrape_invoice_number(tomakomaiNo, self._resultPath)
+        print('登録済み番号でテスト')
+        scrape_invoice_number(1000020012131, self._resultPath)
 
     def test_ScrapInvoiceNumber_false(self):
         print('未登録の登録番号でテスト')

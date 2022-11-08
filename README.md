@@ -26,7 +26,6 @@ scrape_invoice_number(invoiceNo, resultPath)
 ```json
 {
   "number": "T1234567890123",
-  "name": "サンプル",
   "timestamp_last": "令和4年6月13日"
 }
 ```
