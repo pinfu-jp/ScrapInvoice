@@ -4,6 +4,9 @@
 - 適格請求書登録番号が実在するかを調査できるスクリプトです
 - [適格請求書発行事業者公表サイト](https://www.invoice-kohyo.nta.go.jp/)をWebスクレイピングしてhtmlから情報を取得しています
 
+> [適格請求書発行事業者公表システムWeb-API](https://www.invoice-kohyo.nta.go.jp/web-api/index.html)は利用していません
+> - Webスクレイピングの利便性を確認することを目的としたプロジェクトです
+
 # サンプルコード
 
 ## 実行コード
